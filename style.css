@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #212529;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Overlay to enhance text visibility */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+h1, h2 {
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #ffffff !important;
+}
+
+.navbar-brand i {
+    font-size: 1.5rem;
+    color: #0d6efd !important;
+}
+
+.form-floating .form-select {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-floating .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+}
+
+.form-floating label {
+    top: -0.5rem;
+    left: 0.75rem;
+    padding: 0 0.25rem;
+    font-size: 0.9rem;
+    color: #0d6efd;
+}
+
+.form-floating label i {
+    color: #0d6efd;
+}
+
+#table-container {
+    overflow-x: auto;
+}
+
+.table {
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid #dee2e6;
+    color: #ffffff;
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+}
